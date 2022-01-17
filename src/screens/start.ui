@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sigma</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../assets/Sigma.ico</normaloff>../assets/Sigma.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="bgWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#F8F7FC;</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>100</y>
+       <width>571</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#0B0B0B;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;</string>
+     </property>
+     <property name="text">
+      <string>Flow Shop job scheduling Software</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="start">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>490</y>
+       <width>150</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;
+font: 14pt &quot;Montserrat SemiBold&quot;;
+color:white;
+  background-color: #6F51EC;</string>
+     </property>
+     <property name="text">
+      <string>Next</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="delai">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>370</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#0B0B0B;
+
+font-family: Montserrat SemiBold;
+font-style: normal;
+font-size: 15px;</string>
+     </property>
+     <property name="text">
+      <string>Delay</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="preparation">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>310</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#0B0B0B;
+
+font-family: Montserrat SemiBold;
+font-style: normal;
+font-size: 15px;</string>
+     </property>
+     <property name="text">
+      <string>Preparation</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="nb_machines">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>240</y>
+       <width>46</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #6F51EC;
+background-color: rgb(255, 255, 255);
+font: 75 10pt &quot;Montserrat Medium&quot;;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>240</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#0B0B0B;
+
+font-family: Montserrat SemiBold;
+font-style: normal;
+font-size: 15px;</string>
+     </property>
+     <property name="text">
+      <string>Machines</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="nb_jobs">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>240</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #6F51EC;
+background-color: rgb(255, 255, 255);
+font: 75 10pt &quot;Montserrat Medium&quot;;</string>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>240</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#0B0B0B;
+
+font-family: Montserrat SemiBold;
+font-style: normal;
+font-size: 15px;</string>
+     </property>
+     <property name="text">
+      <string>Jobs</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="optimize">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>370</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #6F51EC;
+background-color: rgb(255, 255, 255);
+font: 75 10pt &quot;Montserrat Medium&quot;;</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Total Tardiness</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Cmax</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="algorithm">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>300</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #6F51EC;
+background-color: rgb(255, 255, 255);
+font: 75 10pt &quot;Montserrat Medium&quot;;</string>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::InsertAtBottom</enum>
+     </property>
+     <item>
+      <property name="text">
+       <string>Proper Time</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CDS</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>380</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#0B0B0B;
+
+font-family: Montserrat SemiBold;
+font-style: normal;
+font-size: 15px;</string>
+     </property>
+     <property name="text">
+      <string>Optimize</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>310</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#0B0B0B;
+
+font-family: Montserrat SemiBold;
+font-style: normal;
+font-size: 15px;</string>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="text">
+      <string>Algorithm</string>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="dataLabel">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>160</y>
+       <width>441</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 15px;
+color:#ABB1C1;</string>
+     </property>
+     <property name="text">
+      <string>Flow shop job scheduling software for ‘n’ jobs and ‘m’ machines</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>80</width>
+       <height>600</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#373B54;</string>
+     </property>
+     <widget class="QPushButton" name="logo">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../assets/Sigma.png</normaloff>../assets/Sigma.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <zorder>label</zorder>
+    <zorder>start</zorder>
+    <zorder>delai</zorder>
+    <zorder>preparation</zorder>
+    <zorder>label_2</zorder>
+    <zorder>nb_jobs</zorder>
+    <zorder>label_3</zorder>
+    <zorder>optimize</zorder>
+    <zorder>algorithm</zorder>
+    <zorder>label_4</zorder>
+    <zorder>label_5</zorder>
+    <zorder>dataLabel</zorder>
+    <zorder>widget</zorder>
+    <zorder>nb_machines</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

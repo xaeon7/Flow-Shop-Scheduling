@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Montserrat</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Sigma - Results</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Sigma.ico</normaloff>Sigma.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(248, 247, 252);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="sideBar">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>80</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(55, 59, 84);
+width:'80px'</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="logo">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>80</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../assets/Sigma.png</normaloff>../assets/Sigma.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>80</width>
+       <height>80</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>500</y>
+      <width>681</width>
+      <height>82</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="data">
+     <item row="3" column="2">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="2">
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="1">
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="makespanLabel">
+       <property name="styleSheet">
+        <string notr="true">color : &quot;#0B0B0B&quot;;
+font: 75 12pt &quot;Montserrat SemiBold&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>Makespan</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="sequenceLabel">
+       <property name="styleSheet">
+        <string notr="true">color : &quot;#0B0B0B&quot;;
+font: 75 12pt &quot;Montserrat SemiBold&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>Sequence</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="QLabel" name="ttLabel">
+       <property name="styleSheet">
+        <string notr="true">color : &quot;#0B0B0B&quot;;
+font: 75 12pt &quot;Montserrat SemiBold&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>Total Tardiness</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="sigma">
+       <property name="styleSheet">
+        <string notr="true">font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Sequence</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="5">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="2" column="1">
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="2" column="3">
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="2" column="5">
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="c_max">
+       <property name="styleSheet">
+        <string notr="true">font: 300 10pt;
+</string>
+       </property>
+       <property name="text">
+        <string>Makespan</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QLabel" name="tt">
+       <property name="styleSheet">
+        <string notr="true">font: 57 10pt &quot;Montserrat Medium&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Total Tardiness</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>20</y>
+      <width>681</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="navs">
+     <item>
+      <widget class="QPushButton" name="back">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: &quot;#6F51ED&quot;;
+border: 1px solid rgb(111, 81, 237) ;
+border-top-left-radius:'5px';
+border-bottom-left-radius:'5px';
+border-top-right-radius:'5px';
+border-bottom-right-radius:'5px';
+font: 63 11pt &quot;Montserrat SemiBold&quot;;
+width: '95px';
+height: '30px';</string>
+       </property>
+       <property name="text">
+        <string>Back</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="gantt">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: &quot;#ffffff&quot;;
+background-color: rgb(111, 81, 237);
+border: 1px solid rgb(111, 81, 237) ;
+border-top-left-radius:'5px';
+border-bottom-left-radius:'5px';
+border-top-right-radius:'5px';
+border-bottom-right-radius:'5px';
+font: 63 11pt &quot;Montserrat SemiBold&quot;;
+width: '95px';
+height: '30px';</string>
+       </property>
+       <property name="text">
+        <string>Gantt</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="tfr">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: &quot;#ffffff&quot;;
+background-color: rgb(111, 81, 237);
+border: 1px solid rgb(111, 81, 237) ;
+border-top-left-radius:'5px';
+border-bottom-left-radius:'5px';
+border-top-right-radius:'5px';
+border-bottom-right-radius:'5px';
+font: 63 11pt &quot;Montserrat SemiBold&quot;;
+width: '95px';
+height: '30px';</string>
+       </property>
+       <property name="text">
+        <string>TFR</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="tap">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: &quot;#ffffff&quot;;
+background-color: rgb(111, 81, 237);
+border: 1px solid rgb(111, 81, 237) ;
+border-top-left-radius:'5px';
+border-bottom-left-radius:'5px';
+border-top-right-radius:'5px';
+border-bottom-right-radius:'5px';
+font: 63 11pt &quot;Montserrat SemiBold&quot;;
+width: '95px';
+height: '30px';</string>
+       </property>
+       <property name="text">
+        <string>TAP</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="tar">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: &quot;#ffffff&quot;;
+background-color: rgb(111, 81, 237);
+border: 1px solid rgb(111, 81, 237) ;
+border-top-left-radius:'5px';
+border-bottom-left-radius:'5px';
+border-top-right-radius:'5px';
+border-bottom-right-radius:'5px';
+font: 63 11pt &quot;Montserrat SemiBold&quot;;
+width: '95px';
+height: '30px';</string>
+       </property>
+       <property name="text">
+        <string>TAR</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>70</y>
+      <width>681</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="plotsContainer">
+     <item>
+      <widget class="QStackedWidget" name="plots">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="ganttPlot">
+        <widget class="QWidget" name="horizontalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>681</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="ganttTB">
+          <item>
+           <widget class="QCheckBox" name="checkBox">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 57 10
+pt &quot;Montserrat Medium&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Show Grid</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_5">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>40</y>
+           <width>681</width>
+           <height>391</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="plotGANTT"/>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tfrPlot">
+        <widget class="QWidget" name="horizontalLayoutWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>681</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="tfrTB">
+          <item>
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>40</y>
+           <width>681</width>
+           <height>391</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="plotTFR"/>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tapPlot">
+        <widget class="QWidget" name="horizontalLayoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>681</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="tapTB">
+          <item>
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>40</y>
+           <width>681</width>
+           <height>391</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="plotTAP"/>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tarPlot">
+        <widget class="QWidget" name="horizontalLayoutWidget_5">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>681</width>
+           <height>34</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="tarTB">
+          <item>
+           <spacer name="horizontalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>40</y>
+           <width>681</width>
+           <height>381</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="plotTAR"/>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionOpen_csv_file">
+   <property name="text">
+    <string>Open csv file</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

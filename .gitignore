@@ -3,3 +3,5 @@
 /installer
 
 __pycache__/     
+
+*.xlsx

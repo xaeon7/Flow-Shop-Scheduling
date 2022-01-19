@@ -40,6 +40,9 @@ background-color:#F8F7FC;}</string>
        <height>42</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
       <string notr="true">border-radius: 10px;
 font: 14pt &quot;Montserrat SemiBold&quot;;
@@ -58,6 +61,9 @@ color:white;
        <width>114</width>
        <height>32</height>
       </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
       <string notr="true">font-family: Montserrat;
@@ -96,6 +102,9 @@ border-radius: 10px;</string>
        <width>95</width>
        <height>32</height>
       </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
       <string notr="true">border-radius: 10px;

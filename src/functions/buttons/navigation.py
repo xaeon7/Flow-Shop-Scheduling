@@ -12,7 +12,11 @@ def handleStartPageNavigation(self, widget, screen):
 def handleNavigation(self, widget, screen):
     self.continueButton.clicked.connect(lambda : goNext(self, widget = widget, screen = screen))
     self.backButton.clicked.connect(lambda : goBack(self, widget = widget))
-    self.logo.clicked.connect(lambda : goHome(self, widget = widget))
+    self.logo.clicked.connect(lambda : goHome(widget = widget))
+    
+def handlePlotsScreenNavigation(self, widget):
+    self.back.clicked.connect(lambda : goBack(self, widget = widget))
+    self.logo.clicked.connect(lambda : goHome(widget = widget))
     
 def updateNextButton(self, widget, screen):
      

@@ -180,7 +180,7 @@ color:#ABB1C1;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>Sigma.png</normaloff>Sigma.png</iconset>
+        <normaloff>../assets/Sigma.png</normaloff>../assets/Sigma.png</iconset>
       </property>
       <property name="iconSize">
        <size>

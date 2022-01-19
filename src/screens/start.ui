@@ -73,7 +73,7 @@ color:white;
       <string>Next</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="delai">
+    <widget class="QCheckBox" name="delay">
      <property name="geometry">
       <rect>
        <x>170</x>
@@ -377,7 +377,7 @@ color:#ABB1C1;</string>
     </widget>
     <zorder>label</zorder>
     <zorder>start</zorder>
-    <zorder>delai</zorder>
+    <zorder>delay</zorder>
     <zorder>preparation</zorder>
     <zorder>label_2</zorder>
     <zorder>nb_jobs</zorder>

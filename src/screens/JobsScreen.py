@@ -10,7 +10,7 @@ import functions.tables.importTable as importTable
 
 import functions.buttons.navigation as navigation
 
-
+from constants.screens import screens
 class JobsMatrixInput(QMainWindow):
     
     def __init__(self, widget):
@@ -20,14 +20,14 @@ class JobsMatrixInput(QMainWindow):
         loadUi("src/screens/ui/JobsScreen.ui",self)
 
         #? Handle navigation
-        navigation.handleNavigation(self, widget = widget, screen = 1)
+        navigation.handleNavigation(self, widget = widget, screen = screens["JobsInput"])
 
         #? Initialize the state of next button
         self.continueButton.setStyleSheet(styles.continueButtonDisabled)
         self.continueButton.setEnabled(False)
 
         #? Track button updates
-        self.matrixTable.itemChanged.connect(lambda : navigation.updateNextButton(self, widget = widget, screen = 1))
+        self.matrixTable.itemChanged.connect(lambda : navigation.updateNextButton(self, widget = widget, screen = screens["JobsInput"]))
 
         #? Create a table with n jobs and m machines
         createTable.jobTable(self, columns = widget.nb_jobs, rows = widget.nb_machines, widget = widget)

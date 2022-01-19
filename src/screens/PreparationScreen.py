@@ -8,6 +8,7 @@ import functions.tables.importTable as importTable
 
 import functions.buttons.navigation as navigation
 
+from constants.screens import screens
 class PrepInput(QMainWindow):
     def __init__(self, widget):
         super(PrepInput, self).__init__()
@@ -16,7 +17,7 @@ class PrepInput(QMainWindow):
         loadUi("src/screens/ui/PreparationScreen.ui",self)
         
         #? Handle navigation
-        navigation.handleNavigation(self, widget = widget, screen = 3)
+        navigation.handleNavigation(self, widget = widget, screen = screens["PreparationInput"])
         
         #? Initialize the state of next button
         self.continueButton.setStyleSheet(styles.continueButtonDisabled)
@@ -31,7 +32,7 @@ class PrepInput(QMainWindow):
         #? Track button updates
         for machineTable in range(widget.nb_machines):
             tab = self.prepTabs.widget(machineTable).children()[1]
-            tab.itemChanged.connect(lambda : navigation.updateNextButton(self, widget = widget, screen = 3)) 
+            tab.itemChanged.connect(lambda : navigation.updateNextButton(self, widget = widget, screen = screens["PreparationInput"])) 
 
         #? Initialize Errors
         self.errorType = 0

@@ -8,6 +8,7 @@ import functions.tables.importTable as importTable
 
 import functions.buttons.navigation as navigation
 
+from constants.screens import screens
 class DelayInput(QMainWindow):
     def __init__(self, widget):
         
@@ -20,7 +21,7 @@ class DelayInput(QMainWindow):
         createTable.delayTable(self, widget = widget)
 
         #? Handle navigation
-        navigation.handleNavigation(self, widget = widget, screen = 2)
+        navigation.handleNavigation(self, widget = widget, screen = screens["DelayInput"])
 
         #? Handle file import
         self.importButton.clicked.connect(lambda : importTable.delayTable(self, 2, 2, widget = widget))
@@ -30,7 +31,7 @@ class DelayInput(QMainWindow):
         self.continueButton.setEnabled(False)
         
         #? Track button updates
-        self.matrixTable.itemChanged.connect(lambda : navigation.updateNextButton(self, widget = widget, screen = 2))
+        self.matrixTable.itemChanged.connect(lambda : navigation.updateNextButton(self, widget = widget, screen = screens["DelayInput"]))
 
         #? Initialize Errors
         self.errorType = 0

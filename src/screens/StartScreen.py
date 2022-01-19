@@ -5,6 +5,7 @@ import functions.buttons.navigation as navigation
 
 from screens.JobsScreen import JobsMatrixInput
 
+from constants.screens import screens
 class StartScreen(QMainWindow):
     def __init__(self, widget):
 
@@ -20,7 +21,7 @@ class StartScreen(QMainWindow):
         self.delay.clicked.connect(self.updateOptimize)
 
         #? Handle navigation
-        navigation.handleStartPageNavigation(self, widget = widget, screen = 0)
+        navigation.handleStartPageNavigation(self, widget = widget, screen = screens["Start"] )
 
     def updateAlgo(self):
         self.algorithm.setEnabled(self.preparation.isChecked())

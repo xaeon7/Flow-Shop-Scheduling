@@ -52,8 +52,3 @@ def goNext(self, widget, screen):
             #? Go to the next Screen                    
             if widget.jobsMatrix :
                 goToPlotsScreen(widget = widget)
-            
-            
-
-    
-

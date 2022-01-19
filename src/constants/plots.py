@@ -1,0 +1,1 @@
+plots = {'Gantt' : 1, "TFR": 2, "TAP": 3, "TAR": 4}

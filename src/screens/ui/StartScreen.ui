@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../assets/Sigma.ico</normaloff>../assets/Sigma.ico</iconset>
+    <normaloff>../../assets/Sigma.ico</normaloff>../../assets/Sigma.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="bgWidget" native="true">
@@ -51,7 +51,7 @@ font-size: 24px;</string>
       <string>Flow Shop job scheduling Software</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="start">
+    <widget class="QPushButton" name="continueButton">
      <property name="geometry">
       <rect>
        <x>570</x>
@@ -73,7 +73,7 @@ color:white;
       <string>Next</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="delai">
+    <widget class="QCheckBox" name="delay">
      <property name="geometry">
       <rect>
        <x>170</x>
@@ -365,7 +365,7 @@ color:#ABB1C1;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../assets/Sigma.png</normaloff>../assets/Sigma.png</iconset>
+        <normaloff>../../assets/Sigma.png</normaloff>../../assets/Sigma.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -376,8 +376,8 @@ color:#ABB1C1;</string>
      </widget>
     </widget>
     <zorder>label</zorder>
-    <zorder>start</zorder>
-    <zorder>delai</zorder>
+    <zorder>continueButton</zorder>
+    <zorder>delay</zorder>
     <zorder>preparation</zorder>
     <zorder>label_2</zorder>
     <zorder>nb_jobs</zorder>

@@ -6,16 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>810</width>
     <height>561</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Sigma - Import Preparation Times</string>
+   <string>Sigma - Import Due Dates</string>
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../assets/Sigma.ico</normaloff>../assets/Sigma.ico</iconset>
+    <normaloff>Sigma.ico</normaloff>Sigma.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="bgWidget" native="true">
@@ -23,7 +23,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>801</width>
+      <width>811</width>
       <height>601</height>
      </rect>
     </property>
@@ -40,6 +40,9 @@ background-color:#F8F7FC;}</string>
        <height>42</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
       <string notr="true">border-radius: 10px;
 font: 14pt &quot;Montserrat SemiBold&quot;;
@@ -54,10 +57,13 @@ color:white;
      <property name="geometry">
       <rect>
        <x>606</x>
-       <y>140</y>
+       <y>142</y>
        <width>114</width>
        <height>32</height>
       </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
       <string notr="true">font-family: Montserrat;
@@ -72,22 +78,6 @@ border-radius: 10px;</string>
       <string>Import</string>
      </property>
     </widget>
-    <widget class="QTabWidget" name="prepTabs">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>210</y>
-       <width>601</width>
-       <height>251</height>
-      </rect>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="currentIndex">
-      <number>-1</number>
-     </property>
-    </widget>
     <widget class="QPushButton" name="backButton">
      <property name="geometry">
       <rect>
@@ -96,6 +86,9 @@ border-radius: 10px;</string>
        <width>95</width>
        <height>32</height>
       </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
       <string notr="true">border-radius: 10px;
@@ -114,7 +107,7 @@ color:#6F51ED;</string>
       <rect>
        <x>170</x>
        <y>133</y>
-       <width>311</width>
+       <width>291</width>
        <height>31</height>
       </rect>
      </property>
@@ -127,15 +120,15 @@ font-weight: bold;
 font-size: 24px;</string>
      </property>
      <property name="text">
-      <string>Data Input</string>
+      <string>Delay of jobs</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="dataLabel">
      <property name="geometry">
       <rect>
        <x>170</x>
        <y>167</y>
-       <width>401</width>
+       <width>371</width>
        <height>21</height>
       </rect>
      </property>
@@ -148,10 +141,10 @@ line-height: 15px;
 color:#ABB1C1;</string>
      </property>
      <property name="text">
-      <string>Preparation Times for each machine</string>
+      <string>Due Dates matrices for each machine</string>
      </property>
     </widget>
-    <widget class="QWidget" name="sidebar" native="true">
+    <widget class="QWidget" name="widget" native="true">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -180,7 +173,7 @@ color:#ABB1C1;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>Sigma.png</normaloff>Sigma.png</iconset>
+        <normaloff>../../assets/Sigma.png</normaloff>../../assets/Sigma.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -190,11 +183,24 @@ color:#ABB1C1;</string>
       </property>
      </widget>
     </widget>
+    <widget class="QTableWidget" name="matrixTable">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>225</y>
+       <width>550</width>
+       <height>224</height>
+      </rect>
+     </property>
+     <property name="cursor" stdset="0">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+    </widget>
     <widget class="QLabel" name="error">
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>190</y>
+       <y>200</y>
        <width>371</width>
        <height>21</height>
       </rect>

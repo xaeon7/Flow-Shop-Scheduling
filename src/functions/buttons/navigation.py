@@ -6,8 +6,8 @@ from functions.navigation.goHome import goHome
 
 from constants.screens import screens
 
-def handleStartPageNavigation(self):
-    self.start.clicked.connect(self.gotoJobsInput)
+def handleStartPageNavigation(self, widget, screen):
+    self.continueButton.clicked.connect(lambda : goNext(self, widget = widget, screen = screen))
 
 def handleNavigation(self, widget, screen):
     self.continueButton.clicked.connect(lambda : goNext(self, widget = widget, screen = screen))
@@ -25,8 +25,8 @@ def updateNextButton(self, widget, screen):
     elif screen == screens["PreparationInput"]:
         flag = []
         
-        for mtab in range(widget.nb_machines):
-            tab = self.prepTabs.widget(mtab).children()[1]
+        for machineTable in range(widget.nb_machines):
+            tab = self.prepTabs.widget(machineTable).children()[1]
             flag.append(all([tab.item(row, col)for col in range(widget.nb_jobs) for row in range(widget.nb_jobs)]))
             
         buttonIsEnables = all(flag)
@@ -34,6 +34,7 @@ def updateNextButton(self, widget, screen):
     if buttonIsEnables:
         self.continueButton.setStyleSheet(styles.continueButtonEnabled)
         self.continueButton.setEnabled(True)
+        
     else:
         self.continueButton.setStyleSheet(styles.continueButtonDisabled)
         self.continueButton.setEnabled(False)

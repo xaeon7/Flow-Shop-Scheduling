@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Sigma - Import Time Matrices</string>
+   <string>Sigma - Import Due Dates</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -101,7 +101,7 @@ color:#6F51ED;</string>
       <rect>
        <x>170</x>
        <y>133</y>
-       <width>141</width>
+       <width>291</width>
        <height>31</height>
       </rect>
      </property>
@@ -114,7 +114,7 @@ font-weight: bold;
 font-size: 24px;</string>
      </property>
      <property name="text">
-      <string>Data Input</string>
+      <string>Delay of jobs</string>
      </property>
     </widget>
     <widget class="QLabel" name="dataLabel">
@@ -135,7 +135,7 @@ line-height: 15px;
 color:#ABB1C1;</string>
      </property>
      <property name="text">
-      <string>Time matrices for each machine</string>
+      <string>Due Dates matrices for each machine</string>
      </property>
     </widget>
     <widget class="QWidget" name="widget" native="true">
@@ -167,7 +167,7 @@ color:#ABB1C1;</string>
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../assets/Sigma.png</normaloff>../assets/Sigma.png</iconset>
+        <normaloff>../../assets/Sigma.png</normaloff>../../assets/Sigma.png</iconset>
       </property>
       <property name="iconSize">
        <size>

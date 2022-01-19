@@ -1,4 +1,4 @@
-def goHome(self, widget):
+def goHome(widget):
     widget.setCurrentIndex(0)
     
     for i in range(widget.count(), 0, -1):

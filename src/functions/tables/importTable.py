@@ -6,9 +6,7 @@ import functions.tables.fillTable as fillTable
 
 def jobsTable(self, initCol, initRow, createTable, fillTable, widget):
     
-    options = QFileDialog.Options()
-    options |= QFileDialog.DontUseNativeDialog
-    fileName, _ = QFileDialog.getOpenFileName(self, "Import Jobs Data", "","Excel Files (*.xlsx)", options = options)
+    fileName, _ = QFileDialog.getOpenFileName(self, "Import Jobs Data", "","Excel Files (*.xlsx)")
     
     if not(fileName):
         return 0
@@ -28,9 +26,7 @@ def jobsTable(self, initCol, initRow, createTable, fillTable, widget):
         
 def delayTable(self, initCol, initRow, widget):
 
-    options = QFileDialog.Options()
-    options |= QFileDialog.DontUseNativeDialog
-    fileName, _ = QFileDialog.getOpenFileName(self, "Import Delay Data", "", "Excel Files (*.xlsx)", options=options)
+    fileName, _ = QFileDialog.getOpenFileName(self, "Import Delay Data", "", "Excel Files (*.xlsx)")
     
     if not(fileName):
         return 0
@@ -47,9 +43,7 @@ def delayTable(self, initCol, initRow, widget):
 
 def preparationTables(self, initCol,initRow, widget):
 
-    options = QFileDialog.Options()
-    options |= QFileDialog.DontUseNativeDialog
-    fileName, _ = QFileDialog.getOpenFileName(self,"Import Preparation Data", "","Excel Files (*.xlsx)", options=options)
+    fileName, _ = QFileDialog.getOpenFileName(self,"Import Preparation Data", "","Excel Files (*.xlsx)")
     
     if not(fileName):
         return 0

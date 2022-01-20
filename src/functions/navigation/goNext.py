@@ -37,7 +37,7 @@ def goNext(self, widget, screen):
                 goToPlotsScreen(widget = widget)
             
         elif screen == screens["DelayInput"]:
-            readTable.delaytable(self, widget = widget)
+            readTable.delayTable(self, widget = widget)
             
             #? Go to the next Screen
             if widget.prep:

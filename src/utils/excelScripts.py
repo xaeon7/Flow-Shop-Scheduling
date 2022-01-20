@@ -1,7 +1,3 @@
-from openpyxl import load_workbook
-import openpyxl
-
-
 def readMatrix(sheet, scol, srow):
     col, row = scol, srow
     matrix = []

@@ -89,7 +89,7 @@ It is simple to use, you only have to take in consideration the supported Excel 
 
 ## Credits
 
-This project was made possible with effort of three students:
+This project was made possible with the effort of three students:
 
 - [Aala Eddine Bousskoul](https://github.com/aalaebl)
 - [Ayoub Taoufik](https://github.com/taoufikayoub)

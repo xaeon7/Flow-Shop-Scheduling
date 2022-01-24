@@ -25,9 +25,11 @@ class StartScreen(QMainWindow):
 
     def updateAlgo(self):
         self.algorithm.setEnabled(self.preparation.isChecked())
+        self.algorithmDisable.setVisible(not self.preparation.isChecked())
 
     def updateOptimize(self):
         self.optimize.setEnabled(self.delay.isChecked())
+        self.optimizeDisable.setVisible(not self.delay.isChecked())
 
 
 

@@ -28,7 +28,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:#F8F7FC;</string>
+     <string notr="true">background-color:rgb(248, 247, 252);</string>
     </property>
     <widget class="QLabel" name="label">
      <property name="geometry">
@@ -627,6 +627,40 @@ font-size: 15px;</string>
       <string>Delay</string>
      </property>
     </widget>
+    <widget class="QLabel" name="algorithmDisable">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>300</y>
+       <width>211</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(248, 247, 252, 200)
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="optimizeDisable">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>390</y>
+       <width>211</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(248, 247, 252, 200)
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
     <zorder>label</zorder>
     <zorder>continueButton</zorder>
     <zorder>label_2</zorder>
@@ -643,11 +677,11 @@ font-size: 15px;</string>
     <zorder>label_7</zorder>
     <zorder>preparation</zorder>
     <zorder>delay</zorder>
+    <zorder>algorithmDisable</zorder>
+    <zorder>optimizeDisable</zorder>
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="img/arrows.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

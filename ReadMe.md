@@ -55,7 +55,7 @@ Enjoy!!
 
 You need to install python v3 or a higher version to run this project on your machine.
 
-Clone the repository and `cd` to the project folder, open you favorite command line and type the following commands:
+Clone the repository and `cd` to the project folder, open your terminal and type the following commands:
 
 - Create a virtual environment:
 

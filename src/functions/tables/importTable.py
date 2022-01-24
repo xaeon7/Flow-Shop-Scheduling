@@ -29,6 +29,8 @@ def jobsTable(self, initCol, initRow, createTable, fillTable, widget):
         fillTable.jobTable(self, matrix, widget = widget)
     except IndexError:
         errors.indexError(self)
+    except Exception:
+        errors.Error(self)
     else:
         success.importSuccess(self)
         
@@ -51,6 +53,8 @@ def delayTable(self, initCol, initRow, widget):
         fillTable.delayTable(self, seq, widget = widget)
     except IndexError:
         errors.indexError(self)
+    except Exception:
+        errors.Error(self)
     else:
         success.importSuccess(self)
         
@@ -76,6 +80,8 @@ def preparationTables(self, initCol,initRow, widget):
         fillTable.preparationTables(self,  widget = widget)
     except IndexError:
         errors.indexError(self)
+    except Exception:
+        errors.Error(self)
     else:
         success.importSuccess(self)
         

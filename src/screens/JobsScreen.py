@@ -26,16 +26,14 @@ class JobsMatrixInput(QMainWindow):
         self.continueButton.setStyleSheet(styles.continueButtonDisabled)
         self.continueButton.setEnabled(False)
 
-        #? Track button updates
-        self.matrixTable.itemChanged.connect(lambda : navigation.updateNextButton(self, widget = widget, screen = screens["JobsInput"]))
-
         #? Create a table with n jobs and m machines
         createTable.jobTable(self, columns = widget.nb_jobs, rows = widget.nb_machines, widget = widget)
+        
+        #? Initialize Errors
+        self.errorExists = False
 
         #? Handle file import
         self.importButton.clicked.connect(lambda : importTable.jobsTable(self, 2, 2, createTable, fillTable, widget = widget))
 
-        #? Initialize Errors
-        self.errorType = 0
-
-
+        #? Track button updates
+        self.matrixTable.itemChanged.connect(lambda : navigation.updateNextButton(self, widget = widget, screen = screens["JobsInput"]))

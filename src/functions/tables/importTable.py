@@ -4,6 +4,12 @@ import utils.excelScripts as excelScripts
 
 import functions.tables.fillTable as fillTable
 
+import errors.errors as errors
+import errors.success as success
+from errors.handleFileReading import handleFileReading
+
+from constants.screens import screens
+
 def jobsTable(self, initCol, initRow, createTable, fillTable, widget):
     
     fileName, _ = QFileDialog.getOpenFileName(self, "Import Jobs Data", "","Excel Files (*.xlsx)")
@@ -21,8 +27,13 @@ def jobsTable(self, initCol, initRow, createTable, fillTable, widget):
     #? Fill the table with imported Data
     try:
         fillTable.jobTable(self, matrix, widget = widget)
-    except:
-        self.error.setText('The data is invalid, make sure to fill all the necessary cells.')    
+    except IndexError:
+        errors.indexError(self)
+    else:
+        success.importSuccess(self)
+        
+    #? Check if the imported table is readable
+    handleFileReading(self,  widget = widget, screen = screens["JobsInput"])
         
 def delayTable(self, initCol, initRow, widget):
 
@@ -38,8 +49,13 @@ def delayTable(self, initCol, initRow, widget):
     #? Fill the table with imported Data
     try:
         fillTable.delayTable(self, seq, widget = widget)
-    except:
-        self.error.setText('The data is invalid, make sure to fill all the necessary cells.')   
+    except IndexError:
+        errors.indexError(self)
+    else:
+        success.importSuccess(self)
+        
+    #? Check if the imported table is readable
+    handleFileReading(self,  widget = widget, screen = screens["DelayInput"])           
 
 def preparationTables(self, initCol,initRow, widget):
 
@@ -58,5 +74,10 @@ def preparationTables(self, initCol,initRow, widget):
     #? Fill the table with imported Data
     try:
         fillTable.preparationTables(self,  widget = widget)
-    except:
-        self.error.setText('The data is invalid, make sure to fill all the necessary cells.')  
+    except IndexError:
+        errors.indexError(self)
+    else:
+        success.importSuccess(self)
+        
+    #? Check if the imported table is readable
+    handleFileReading(self,  widget = widget, screen = screens["PreparationInput"])        

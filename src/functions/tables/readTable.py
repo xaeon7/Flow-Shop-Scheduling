@@ -9,9 +9,18 @@ def delayTable(self, widget):
     
 def preparationTables(self, widget):
     n, m = widget.nb_jobs, widget.nb_machines
-    widget.prepMatrix=[]
+    widget.prepMatrix = []
     
     for machineTable in range(m):
         tab = self.prepTabs.widget(machineTable).children()[1] 
         tabData = [[int(tab.item(row, col).text()) for col in range(n)] for row in range(n)]
         widget.prepMatrix.append(tabData)
+        
+
+def preparationSingleTable(self, widget, machineTable):
+    n = widget.nb_jobs
+    widget.prepMatrix = []
+    
+    tab = self.prepTabs.widget(machineTable).children()[1] 
+    tabData = [[int(tab.item(row, col).text()) for col in range(n)] for row in range(n)]
+    widget.prepMatrix.append(tabData)

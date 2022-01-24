@@ -28,3 +28,6 @@ class StartScreen(QMainWindow):
 
     def updateOptimize(self):
         self.optimize.setEnabled(self.delay.isChecked())
+
+
+

@@ -23,15 +23,15 @@ class DelayInput(QMainWindow):
         #? Handle navigation
         navigation.handleNavigation(self, widget = widget, screen = screens["DelayInput"])
 
-        #? Handle file import
-        self.importButton.clicked.connect(lambda : importTable.delayTable(self, 2, 2, widget = widget))
-        
         #? Initialize the state of next button
         self.continueButton.setStyleSheet(styles.continueButtonDisabled)
         self.continueButton.setEnabled(False)
+
+        #? Initialize Errors
+        self.errorExists = False
+
+        #? Handle file import
+        self.importButton.clicked.connect(lambda : importTable.delayTable(self, 2, 2, widget = widget))
         
         #? Track button updates
         self.matrixTable.itemChanged.connect(lambda : navigation.updateNextButton(self, widget = widget, screen = screens["DelayInput"]))
-
-        #? Initialize Errors
-        self.errorType = 0

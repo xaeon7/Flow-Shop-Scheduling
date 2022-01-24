@@ -76,8 +76,8 @@ class DisplayGantt(QMainWindow):
         Sequence = ', '.join([str(elem) for elem in self.flowShopSchedule.sequence])
         self.sigma.setText(Sequence)
         self.c_max.setText(str(self.flowShopSchedule.makespan))
-        self.tt.setText(str(self.flowShopSchedule.totalTardiness))
-
+        self.tt.setText(str(self.flowShopSchedule.totalTardiness))  
+        
 
     def displayTFR(self):
         

@@ -1,11 +1,11 @@
-import functions.tables.readTable as readTable
-
 from constants.screens import screens
 
 from functions.navigation.goToJobsScreen import goToJobsScreen
 from functions.navigation.goToPlotsScreen import goToPlotsScreen
 from functions.navigation.goToPreparationScreen import goToPreprationScreen
 from functions.navigation.goToDelayScreen import goToDelayScreen
+
+from errors.handleFileReading import handleFileReading
 
 def goNext(self, widget, screen):
     
@@ -23,9 +23,9 @@ def goNext(self, widget, screen):
     
     else:     
         #? Read Tables
-        if screen == screens["JobsInput"] :
-            readTable.jobsTable(self, widget = widget)
-            
+        handleFileReading(self,  widget = widget, screen = screen)      
+          
+        if screen == screens["JobsInput"] and not self.errorExists:
             #? Go to the next Screen
             if widget.delay:
                 goToDelayScreen(widget = widget)
@@ -36,8 +36,7 @@ def goNext(self, widget, screen):
             elif widget.jobsMatrix :
                 goToPlotsScreen(widget = widget)
             
-        elif screen == screens["DelayInput"]:
-            readTable.delayTable(self, widget = widget)
+        elif screen == screens["DelayInput"] and not self.errorExists:
             
             #? Go to the next Screen
             if widget.prep:
@@ -46,9 +45,8 @@ def goNext(self, widget, screen):
             elif widget.jobsMatrix :
                 goToPlotsScreen(widget = widget)
         
-        elif screen == screens["PreparationInput"]:
-            readTable.preparationTables(self, widget = widget)
-            
+        elif screen == screens["PreparationInput"] and not self.errorExists:  
+                    
             #? Go to the next Screen                    
             if widget.jobsMatrix :
                 goToPlotsScreen(widget = widget)

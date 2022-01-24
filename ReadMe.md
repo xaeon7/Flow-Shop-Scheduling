@@ -51,7 +51,7 @@ And to install you can follow the installation guide:
 
 Enjoy!!
 
-## How to Install and Run `Python`
+## How to Install it and Run it with `Python`
 
 You need to install python v3 or a higher version to run this project on your machine.
 

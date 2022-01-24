@@ -22,5 +22,8 @@ def handleFileReading(self, widget, screen):
     except AttributeError:
         pass
     
+    except Exception:
+        errors.Error(self)
+    
     else:
         errors.resetError(self)

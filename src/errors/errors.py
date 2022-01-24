@@ -19,5 +19,10 @@ def attributeError(self):
     self.info.setText('There are null elements.')  
     self.info.setStyleSheet(styles.errorMessage)
     
+def Error(self):
+    self.errorExists = True
+    self.info.setText('Something went wrong...')  
+    self.info.setStyleSheet(styles.errorMessage)
+    
 
     

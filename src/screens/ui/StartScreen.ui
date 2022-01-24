@@ -64,10 +64,17 @@ font-size: 24px;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-radius: 10px;
+      <string notr="true">QPushButton{
+border-radius: 10px;
 font: 14pt &quot;Montserrat SemiBold&quot;;
 color:white;
-  background-color: #6F51EC;</string>
+background-color: #6F51EC;
+}
+
+QPushButton:hover{
+background-color: rgb(88, 67, 209);
+}
+</string>
      </property>
      <property name="text">
       <string>Next</string>
@@ -76,9 +83,9 @@ color:white;
     <widget class="QCheckBox" name="delay">
      <property name="geometry">
       <rect>
-       <x>170</x>
-       <y>370</y>
-       <width>71</width>
+       <x>290</x>
+       <y>410</y>
+       <width>51</width>
        <height>31</height>
       </rect>
      </property>
@@ -86,22 +93,34 @@ color:white;
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:#0B0B0B;
+      <string notr="true">QCheckBox::indicator{
+width:50px;
+height: 50px;
+image: url(src/assets/toggleOff.png)
+}
+
+QCheckBox::indicator:unchecked{
+image: url(src/assets/toggleOff.png)
+}
+
+QCheckBox::indicator:checked{
+image: url(src/assets/toggleOn.png)
+}color:#0B0B0B;
 
 font-family: Montserrat SemiBold;
 font-style: normal;
 font-size: 15px;</string>
      </property>
      <property name="text">
-      <string>Delay</string>
+      <string/>
      </property>
     </widget>
     <widget class="QCheckBox" name="preparation">
      <property name="geometry">
       <rect>
-       <x>170</x>
-       <y>310</y>
-       <width>121</width>
+       <x>290</x>
+       <y>320</y>
+       <width>51</width>
        <height>31</height>
       </rect>
      </property>
@@ -109,47 +128,111 @@ font-size: 15px;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:#0B0B0B;
+      <string notr="true">QCheckBox::indicator{
+width:50px;
+height: 50px;
+image: url(src/assets/toggleOff.png)
+}
 
-font-family: Montserrat SemiBold;
-font-style: normal;
-font-size: 15px;</string>
+QCheckBox::indicator:unchecked{
+image: url(src/assets/toggleOff.png)
+}
+
+QCheckBox::indicator:checked{
+image: url(src/assets/toggleOn.png)
+}</string>
      </property>
      <property name="text">
-      <string>Preparation</string>
+      <string/>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="QSpinBox" name="nb_machines">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>240</y>
-       <width>46</width>
-       <height>31</height>
+       <x>270</x>
+       <y>230</y>
+       <width>120</width>
+       <height>36</height>
       </rect>
      </property>
      <property name="cursor">
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border: 1px solid #6F51EC;
-background-color: rgb(255, 255, 255);
-font: 75 10pt &quot;Montserrat Medium&quot;;</string>
+      <string notr="true">QSpinBox {
+    border:3px solid #6F51EC;
+	border-radius:8px;	
+	min-height:30px;
+	max-height:30px;
+	font: 75 12pt &quot;Montserrat SemiBold&quot;;
+	qproperty-alignment: AlignCenter;	
+}
+ 
+QSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+	top:0px;
+    width: 30px;
+	height:30px;  
+    border: 2px solid #6F51EC;
+	border-top-right-radius:8px;
+	border-bottom-right-radius:8px;
+	background:#6F51EC url(src/assets/right.png) center no-repeat;
+}
+ 
+QSpinBox::up-arrow {
+
+    width: 0px;
+    height: 0px;
+}
+ 
+QSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: top left;
+    width: 30px;
+	height:30px;  
+    border: 2px solid #6F51EC;
+	border-top-left-radius:8px;
+	border-bottom-left-radius:8px;
+	background:#6F51EC url(src/assets/left.png) center no-repeat;
+}
+ 
+QSpinBox::down-button:hover,QSpinBox::up-button:hover {
+	background-color:rgb(88, 67, 209);
+	border-color: rgb(88, 67, 209);
+   }
+ 
+QSpinBox::down-arrow {    
+    width: 0px;
+    height: 0px;
+}</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
      <property name="buttonSymbols">
-      <enum>QAbstractSpinBox::NoButtons</enum>
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>240</y>
+       <y>230</y>
        <width>131</width>
-       <height>31</height>
+       <height>30</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -167,18 +250,63 @@ font-size: 15px;</string>
      <property name="geometry">
       <rect>
        <x>580</x>
-       <y>240</y>
-       <width>51</width>
-       <height>31</height>
+       <y>230</y>
+       <width>120</width>
+       <height>36</height>
       </rect>
      </property>
      <property name="cursor">
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">border: 1px solid #6F51EC;
-background-color: rgb(255, 255, 255);
-font: 75 10pt &quot;Montserrat Medium&quot;;</string>
+      <string notr="true">QSpinBox {
+    border:3px solid #6F51EC;
+	border-radius:8px;	
+	min-height:30px;
+	max-height:30px;
+	font: 75 12pt &quot;Montserrat SemiBold&quot;;
+	qproperty-alignment: AlignCenter;	
+}
+ 
+QSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+	top:0px;
+    width: 30px;
+	height:30px;  
+    border: 2px solid #6F51EC;
+	border-top-right-radius:8px;
+	border-bottom-right-radius:8px;
+	background:#6F51EC url(src/assets/right.png) center no-repeat;
+}
+ 
+QSpinBox::up-arrow {
+
+    width: 0px;
+    height: 0px;
+}
+ 
+QSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: top left;
+    width: 30px;
+	height:30px;  
+    border: 2px solid #6F51EC;
+	border-top-left-radius:8px;
+	border-bottom-left-radius:8px;
+	background:#6F51EC url(src/assets/left.png) center no-repeat;
+}
+ 
+QSpinBox::down-button:hover,QSpinBox::up-button:hover {
+	background-color:rgb(88, 67, 209);
+	border-color: rgb(88, 67, 209);
+   }
+ 
+QSpinBox::down-arrow {    
+    width: 0px;
+    height: 0px;
+}
+</string>
      </property>
      <property name="frame">
       <bool>true</bool>
@@ -187,16 +315,16 @@ font: 75 10pt &quot;Montserrat Medium&quot;;</string>
       <set>Qt::AlignCenter</set>
      </property>
      <property name="buttonSymbols">
-      <enum>QAbstractSpinBox::NoButtons</enum>
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
        <x>440</x>
-       <y>240</y>
+       <y>230</y>
        <width>101</width>
-       <height>31</height>
+       <height>30</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -214,8 +342,8 @@ font-size: 15px;</string>
      <property name="geometry">
       <rect>
        <x>580</x>
-       <y>370</y>
-       <width>141</width>
+       <y>400</y>
+       <width>181</width>
        <height>41</height>
       </rect>
      </property>
@@ -223,9 +351,51 @@ font-size: 15px;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">border: 1px solid #6F51EC;
-background-color: rgb(255, 255, 255);
-font: 75 10pt &quot;Montserrat Medium&quot;;</string>
+      <string notr="true">  QComboBox {
+      border: 2px solid #6F51EC;
+      border-radius: 8px;
+      padding: 0px 18px 0px 10px;
+      min-width: 6em;
+		font: 75 10pt &quot;Montserrat Medium&quot;;
+  }
+
+  QComboBox:editable {
+      background: white;
+  }
+
+  QComboBox:!editable, QComboBox::drop-down:editable {
+      background: #FFFFFF;
+  }
+
+  /* QComboBox gets the &quot;on&quot; state when the popup is open */
+  QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+      background: #FFFFFF;
+  }
+
+
+  QComboBox::drop-down {
+      subcontrol-origin: padding;
+      subcontrol-position: top right;
+      width: 25px;
+
+      border-left-width: 1px;
+      border-left-color: #6F51EC;
+      border-left-style: solid; /* just a single line */
+      border-top-right-radius: 3px; /* same radius as the QComboBox */
+      border-bottom-right-radius: 3px;
+	background:#6F51EC  url(src/assets/down.png) center no-repeat;
+  }
+
+  QComboBox::down-arrow {
+      width: 0px;
+		height: 0px;
+  }
+
+  QComboBox QAbstractItemView {
+      selection-background-color: #6F51EC;
+  }
+
+</string>
      </property>
      <item>
       <property name="text">
@@ -242,8 +412,8 @@ font: 75 10pt &quot;Montserrat Medium&quot;;</string>
      <property name="geometry">
       <rect>
        <x>580</x>
-       <y>300</y>
-       <width>141</width>
+       <y>310</y>
+       <width>181</width>
        <height>41</height>
       </rect>
      </property>
@@ -251,9 +421,51 @@ font: 75 10pt &quot;Montserrat Medium&quot;;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">border: 1px solid #6F51EC;
-background-color: rgb(255, 255, 255);
-font: 75 10pt &quot;Montserrat Medium&quot;;</string>
+      <string notr="true">  QComboBox {
+      border: 2px solid #6F51EC;
+      border-radius: 8px;
+      padding: 0px 18px 0px 10px;
+      min-width: 6em;
+		font: 75 10pt &quot;Montserrat Medium&quot;;
+  }
+
+  QComboBox:editable {
+      background: white;
+  }
+
+  QComboBox:!editable, QComboBox::drop-down:editable {
+      background: #FFFFFF;
+  }
+
+  /* QComboBox gets the &quot;on&quot; state when the popup is open */
+  QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+      background: #FFFFFF;
+  }
+
+
+  QComboBox::drop-down {
+      subcontrol-origin: padding;
+      subcontrol-position: top right;
+      width: 25px;
+
+      border-left-width: 1px;
+      border-left-color: #6F51EC;
+      border-left-style: solid; /* just a single line */
+      border-top-right-radius: 3px; /* same radius as the QComboBox */
+      border-bottom-right-radius: 3px;
+	background:#6F51EC  url(src/assets/down.png) center no-repeat;
+  }
+
+  QComboBox::down-arrow {
+      width: 0px;
+		height: 0px;
+  }
+
+  QComboBox QAbstractItemView {
+      selection-background-color: #6F51EC;
+  }
+
+</string>
      </property>
      <property name="insertPolicy">
       <enum>QComboBox::InsertAtBottom</enum>
@@ -272,8 +484,8 @@ font: 75 10pt &quot;Montserrat Medium&quot;;</string>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>440</x>
-       <y>380</y>
+       <x>430</x>
+       <y>410</y>
        <width>111</width>
        <height>21</height>
       </rect>
@@ -292,8 +504,8 @@ font-size: 15px;</string>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>440</x>
-       <y>310</y>
+       <x>430</x>
+       <y>320</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -375,10 +587,48 @@ color:#ABB1C1;</string>
       </property>
      </widget>
     </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>320</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#0B0B0B;
+
+font-family: Montserrat SemiBold;
+font-style: normal;
+font-size: 15px;</string>
+     </property>
+     <property name="text">
+      <string>Preparation</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>410</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#0B0B0B;
+
+font-family: Montserrat SemiBold;
+font-style: normal;
+font-size: 15px;</string>
+     </property>
+     <property name="text">
+      <string>Delay</string>
+     </property>
+    </widget>
     <zorder>label</zorder>
     <zorder>continueButton</zorder>
-    <zorder>delay</zorder>
-    <zorder>preparation</zorder>
     <zorder>label_2</zorder>
     <zorder>nb_jobs</zorder>
     <zorder>label_3</zorder>
@@ -389,9 +639,15 @@ color:#ABB1C1;</string>
     <zorder>dataLabel</zorder>
     <zorder>widget</zorder>
     <zorder>nb_machines</zorder>
+    <zorder>label_6</zorder>
+    <zorder>label_7</zorder>
+    <zorder>preparation</zorder>
+    <zorder>delay</zorder>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="img/arrows.qrc"/>
+ </resources>
  <connections/>
 </ui>
